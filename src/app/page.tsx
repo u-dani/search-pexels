@@ -1,3 +1,9 @@
+import { SearchField } from '@/components/SearchField'
+
 export default function Home() {
-  return <main></main>
+    return (
+        <main>
+            <SearchField />
+        </main>
+    )
 }
