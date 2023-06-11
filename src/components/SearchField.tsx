@@ -59,8 +59,8 @@ export const SearchField = () => {
     return (
         <form
             onSubmit={submit}
-            className={`w-full min-w-max border rounded-lg flex items-center ${
-                inputFocus ? 'bg-neutral-100-100' : 'bg-gray-100'
+            className={`w-full border rounded-lg flex items-center ${
+                inputFocus ? 'bg-white' : 'bg-gray-100'
             } }`}>
             <div>
                 <Select
@@ -74,14 +74,21 @@ export const SearchField = () => {
                 ref={searchInputValue}
                 type='text'
                 placeholder={selectedSearchType.placeholder}
-                className='font-medium text-base tracking-wide px-3 py-1 bg-transparent border-x flex-1 outline-none text-gray-600 max-md:bg-black'
+                className='font-medium text-base tracking-wide px-3 py-1 bg-transparent border-x flex-1 outline-none text-gray-600'
                 minLength={1}
+                onFocus={() => {
+                    setInputFocus(true)
+                }}
+                onBlur={() => {
+                    setInputFocus(false)
+                }}
             />
 
             <button
                 type='submit'
-                className='group/button-search py-3 px-4 flex justify-center items-center'>
-                <MdSearch className='text-gray-600 group-hover/button-search:text-emerald-700 text-2xl max-md:text-xl max-md:py-0' />
+                className='group/button-search flex justify-center items-center p-3'
+                title='Pesquisar'>
+                <MdSearch className='text-gray-600 group-hover/button-search:text-emerald-700 text-xl' />
             </button>
         </form>
     )
