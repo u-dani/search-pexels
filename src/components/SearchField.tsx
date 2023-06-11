@@ -21,13 +21,13 @@ const searchContentTypes: ISearchContentTypes = {
         icon: <BsCardImage />,
         title: 'Fotos',
         placeholder: 'Buscar fotos gratuitas',
-        path: 'search',
+        path: 'procurar',
     },
     videos: {
         icon: <BsPlayBtn />,
         title: 'Vídeos',
         placeholder: 'Buscar vídeos gratuitos',
-        path: 'search/video',
+        path: 'procurar/videos',
     },
 }
 
