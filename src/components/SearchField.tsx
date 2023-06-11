@@ -74,7 +74,7 @@ export const SearchField = () => {
                 ref={searchInputValue}
                 type='text'
                 placeholder={selectedSearchType.placeholder}
-                className='font-medium text-base tracking-wide px-3 py-1 bg-transparent border-x flex-1 outline-none text-gray-600'
+                className='font-medium text-lg tracking-wide px-3 py-1 bg-transparent border-x flex-1 outline-none text-gray-600 max-md:text-base'
                 minLength={1}
                 onFocus={() => {
                     setInputFocus(true)
@@ -88,7 +88,7 @@ export const SearchField = () => {
                 type='submit'
                 className='group/button-search flex justify-center items-center p-3'
                 title='Pesquisar'>
-                <MdSearch className='text-gray-600 group-hover/button-search:text-emerald-700 text-xl' />
+                <MdSearch className='text-gray-600 group-hover/button-search:text-emerald-700 text-2xl max-md:text-xl' />
             </button>
         </form>
     )

@@ -50,7 +50,7 @@ export const Select = ({
             </button>
 
             {toggleOptionsDisplay && (
-                <div className='z-50 absolute bg-white border rounded-lg py-2 w-full my-2 left-0 top-full'>
+                <div className='z-50 absolute bg-white border rounded-lg py-2 min-w-full my-3 left-0 top-full'>
                     {Object.keys(optionsContent).map(opt => (
                         <span
                             key={optionsContent[opt].title}
@@ -63,10 +63,7 @@ export const Select = ({
                             }`}
                             data-option={opt}>
                             {optionsContent[opt].icon}
-                            <span
-                                className={`text-base ${
-                                    selectedOption.icon && 'max-md:hidden'
-                                }`}>
+                            <span className={`text-base`}>
                                 {optionsContent[opt].title}
                             </span>
                         </span>
