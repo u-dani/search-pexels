@@ -4,18 +4,18 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Buscar Fotos e Vídeos no Pexels',
-  description: 'Buscar fotos e videos gratuitos no Pexels',
+    title: 'Buscar Fotos e Vídeos no Pexels',
+    description: 'Buscar fotos e videos gratuitos no Pexels',
 }
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode
+    children: React.ReactNode
 }) {
-  return (
-    <html lang='pt-BR'>
-      <body className={inter.className}>{children}</body>
-    </html>
-  )
+    return (
+        <html lang='pt-BR'>
+            <body className={inter.className}>{children}</body>
+        </html>
+    )
 }

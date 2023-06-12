@@ -4,7 +4,7 @@ import { SearchField } from '../SearchField'
 
 export const Header = () => {
     return (
-        <header className='flex justify-between items-center py-4 px-6 gap-6 max-md:px-3'>
+        <header className='flex justify-between items-center py-4 px-8 max-md:px-3 gap-6'>
             <Logo />
             <div className='w-3/6 min-w-[345px]'>
                 <SearchField />

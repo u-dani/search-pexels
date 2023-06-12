@@ -23,7 +23,7 @@ export const Navbar = (props: INavbarProps) => {
             />
 
             <ul
-                className={`rounded flex gap-x-6 gap-y-4 items-center font-medium right-0 ${
+                className={`z-50 rounded flex gap-x-6 gap-y-4 items-center font-medium right-0 ${
                     props.white ? 'text-white' : 'text-neutral-800'
                 } ${
                     showMenu

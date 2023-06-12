@@ -1,14 +1,14 @@
+import { Header } from '@/components/layout/Header'
+
 export default function RootLayout({
     children,
 }: {
     children: React.ReactNode
 }) {
     return (
-        <html lang='pt-BR'>
-            <body>
-                <span>bom dia</span>
-                {children}
-            </body>
-        </html>
+        <main>
+            <Header />
+            <div className='px-8 max-md:px-3'>{children}</div>
+        </main>
     )
 }

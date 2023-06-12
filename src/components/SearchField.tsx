@@ -74,7 +74,7 @@ export const SearchField = () => {
                 ref={searchInputValue}
                 type='text'
                 placeholder={selectedSearchType.placeholder}
-                className='font-medium text-lg tracking-wide px-3 py-1 bg-transparent border-x flex-1 outline-none text-gray-600 max-md:text-base'
+                className='font-medium text-lg tracking-wide px-3 py-1 bg-transparent border-x flex-1 outline-none text-gray-600 max-lg:text-base w-full'
                 minLength={1}
                 onFocus={() => {
                     setInputFocus(true)

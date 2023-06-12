@@ -10,8 +10,7 @@ interface ILogoProps {
 export const Logo = (props: ILogoProps) => {
     return (
         <Link
-            href='https://www.pexels.com/pt-br/'
-            target='_blank'
+            href='/'
             className='cursor-pointer hover:opacity-80 duration-150 ease-in-out'>
             <span className='w-max flex flex-row gap-2 justify-between items-center min-w-fit'>
                 <Image
