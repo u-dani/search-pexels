@@ -22,7 +22,7 @@ export const PhotoGallery = ({ images }: IPhotoGalleryProps) => {
     return (
         <div>
             {arrayImages ? (
-                <div className='grid gap-6 grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1'>
+                <div className='grid gap-6 grid-cols-3 max-md:grid-cols-2 max-[480px]:grid-cols-1'>
                     {arrayImages.map(column => (
                         <div
                             key={JSON.stringify(column)}
