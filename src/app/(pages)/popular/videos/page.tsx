@@ -1,3 +1,12 @@
+import { PopularVideosGallery } from '@/components/intersectionObserver/PopularVideosGallery'
+import { requestPopularVideos } from '@/requests/requestPopularVideos'
+
 export default async function PopularVideosPage() {
-    return <span>popular videos</span>
+    const videos = await requestPopularVideos()
+
+    return (
+        <div>
+            <PopularVideosGallery initialVideosArray={videos} />
+        </div>
+    )
 }

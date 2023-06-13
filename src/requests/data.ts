@@ -20,3 +20,20 @@ export interface IPexelsImageResource {
     }
     alt: string
 }
+
+export interface IPexelsVideoResource {
+    id: number
+    url: string
+    duration: number // in seconds
+    user: {
+        name: string
+        url: string
+    }
+    video_files: [
+        {
+            id: string
+            file_type: string
+            link: string
+        }
+    ]
+}
