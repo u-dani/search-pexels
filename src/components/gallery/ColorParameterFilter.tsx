@@ -94,7 +94,7 @@ export const ColorParameterFilter = ({
                         onInput={handleInputColor}
                         maxLength={6}
                         placeholder='Insira o código hexadecimal'
-                        className='bg-transparent outline-none font-medium placeholder:pl-1'
+                        className='bg-transparent w-full outline-none font-medium placeholder:pl-1'
                         defaultValue={colorParameterValue ?? ''}
                     />
                 </div>

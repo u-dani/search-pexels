@@ -57,7 +57,7 @@ export const NavbarGallery = ({
             </div>
 
             {toggleFilterDisplay && (
-                <div className='grid grid-cols-3 gap-4'>
+                <div className='grid grid-cols-3 gap-4 max-md:grid-cols-2'>
                     {orientationParameterFilter && (
                         <OrientationParameterFilter
                             {...orientationParameterFilter}

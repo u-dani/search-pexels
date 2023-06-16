@@ -1,3 +1,4 @@
+import { Title } from '@/components/Title'
 import { ColorParameterFilter } from '@/components/gallery/ColorParameterFilter'
 import { NavbarGallery } from '@/components/gallery/NavbarGallery'
 import { OrientationParameterFilter } from '@/components/gallery/OrientationParameterFilter'
@@ -20,21 +21,31 @@ export default async function PhotoSearchPage({
     const color = searchParams.color
 
     return (
-        <div className='flex flex-col gap-2'>
+        <>
+            <Title>
+                Images de
+                <span className='capitalize'>
+                    &nbsp;
+                    {decodeURIComponent(params.query)}
+                </span>
+            </Title>
+
             <NavbarGallery
                 photoLinkButtonProps={{ href: '', dark: true, disabled: true }}
-                videoLinkButtonProps={{ href: '' }}
+                videoLinkButtonProps={{
+                    href: `procurar/videos/${params.query}`,
+                }}
                 orientationParameterFilter={{
                     orientationParameterValue: orientation,
-                    otherParameters: `${color && `color=${color}`}`,
+                    otherParameters: `${color ? `color=${color}` : ''}`,
                 }}
                 colorParameterFilter={{
                     colorParameterValue: color,
                     otherParameters: `${
-                        orientation && `orientation=${orientation}`
+                        orientation ? `orientation=${orientation}` : ''
                     }`,
                 }}
             />
-        </div>
+        </>
     )
 }
