@@ -20,15 +20,16 @@ interface ILinkButtonProps extends Partial<IButtonProps> {
 interface INavbarGalleryProps {
     photoLinkButtonProps: ILinkButtonProps
     videoLinkButtonProps: ILinkButtonProps
-    orientationParameterFilter?: IOrientationParameterFilterProps
-    colorParameterFilter?: IColorParameterFilterProps
+    filters?: {
+        orientationParameterFilter?: IOrientationParameterFilterProps
+        colorParameterFilter?: IColorParameterFilterProps
+    }
 }
 
 export const NavbarGallery = ({
     photoLinkButtonProps,
     videoLinkButtonProps,
-    orientationParameterFilter,
-    colorParameterFilter,
+    filters,
 }: INavbarGalleryProps) => {
     const [toggleFilterDisplay, setToggleFilterDisplay] = useState(false)
 
@@ -44,27 +45,31 @@ export const NavbarGallery = ({
                     </Button>
                 </div>
 
-                <Button
-                    border
-                    handleClick={() => {
-                        setToggleFilterDisplay(state => !state)
-                    }}>
-                    <span className='flex gap-2 items-center'>
-                        <IoFilter className='text-lg' />
-                        <span>Filtros</span>
-                    </span>
-                </Button>
+                {filters && (
+                    <Button
+                        border
+                        handleClick={() => {
+                            setToggleFilterDisplay(state => !state)
+                        }}>
+                        <span className='flex gap-2 items-center'>
+                            <IoFilter className='text-lg' />
+                            <span>Filtros</span>
+                        </span>
+                    </Button>
+                )}
             </div>
 
             {toggleFilterDisplay && (
                 <div className='grid grid-cols-3 gap-4 max-md:grid-cols-2'>
-                    {orientationParameterFilter && (
+                    {filters?.orientationParameterFilter && (
                         <OrientationParameterFilter
-                            {...orientationParameterFilter}
+                            {...filters.orientationParameterFilter}
                         />
                     )}
-                    {colorParameterFilter && (
-                        <ColorParameterFilter {...colorParameterFilter} />
+                    {filters?.colorParameterFilter && (
+                        <ColorParameterFilter
+                            {...filters.colorParameterFilter}
+                        />
                     )}
                 </div>
             )}
