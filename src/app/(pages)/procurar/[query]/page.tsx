@@ -35,15 +35,17 @@ export default async function PhotoSearchPage({
                 videoLinkButtonProps={{
                     href: `procurar/videos/${params.query}`,
                 }}
-                orientationParameterFilter={{
-                    orientationParameterValue: orientation,
-                    otherParameters: `${color ? `color=${color}` : ''}`,
-                }}
-                colorParameterFilter={{
-                    colorParameterValue: color,
-                    otherParameters: `${
-                        orientation ? `orientation=${orientation}` : ''
-                    }`,
+                filters={{
+                    orientationParameterFilter: {
+                        orientationParameterValue: orientation,
+                        otherParameters: `${color ? `color=${color}` : ''}`,
+                    },
+                    colorParameterFilter: {
+                        colorParameterValue: color,
+                        otherParameters: `${
+                            orientation ? `orientation=${orientation}` : ''
+                        }`,
+                    },
                 }}
             />
         </>

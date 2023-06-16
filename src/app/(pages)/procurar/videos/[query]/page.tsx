@@ -33,8 +33,10 @@ export default async function VideoSearchPage({
                     dark: true,
                     disabled: true,
                 }}
-                orientationParameterFilter={{
-                    orientationParameterValue: searchParams.orientation,
+                filters={{
+                    orientationParameterFilter: {
+                        orientationParameterValue: searchParams.orientation,
+                    },
                 }}
             />
         </>
