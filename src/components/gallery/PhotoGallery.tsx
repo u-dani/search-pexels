@@ -17,8 +17,6 @@ export const PhotoGallery = ({ images }: IPhotoGalleryProps) => {
         groupsAmount: gridColumns,
     })
 
-    console.log(arrayImages)
-
     return (
         <div>
             {arrayImages ? (

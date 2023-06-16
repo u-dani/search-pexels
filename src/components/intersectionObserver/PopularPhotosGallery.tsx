@@ -12,10 +12,10 @@ interface IPopularPhotosGalleryProps {
 export const PopularPhotosGallery = ({
     initialPhotosArray,
 }: IPopularPhotosGalleryProps) => {
-    const [photos, setPhotos] = useState<IPexelsImageResource[] | undefined>(
-        initialPhotosArray ?? undefined
+    const [photos, setPhotos] = useState<IPexelsImageResource[]>(
+        initialPhotosArray ?? []
     )
-    const [currentPage, setCurrentPage] = useState(initialPhotosArray ? 1 : 0)
+    const [currentPage, setCurrentPage] = useState(initialPhotosArray ? 2 : 1)
 
     const { ref } = useInView({
         rootMargin: '1000px',
@@ -27,7 +27,7 @@ export const PopularPhotosGallery = ({
     useEffect(() => {
         async function requestPhotos() {
             const data = await requestPopularPhotos({ page: currentPage })
-            photos ? setPhotos(photos?.concat(data)) : setPhotos(data)
+            setPhotos(photos?.concat(data))
         }
         requestPhotos()
         // eslint-disable-next-line react-hooks/exhaustive-deps

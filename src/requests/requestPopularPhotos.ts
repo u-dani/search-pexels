@@ -16,5 +16,6 @@ export const requestPopularPhotos = async (
     )
 
     const data = await res.json()
+
     return data.photos
 }

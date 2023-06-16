@@ -12,10 +12,10 @@ interface IPopularVideosGalleryProps {
 export const PopularVideosGallery = ({
     initialVideosArray,
 }: IPopularVideosGalleryProps) => {
-    const [videos, setVideos] = useState<IPexelsVideoResource[] | undefined>(
-        initialVideosArray ?? undefined
+    const [videos, setVideos] = useState<IPexelsVideoResource[]>(
+        initialVideosArray ?? []
     )
-    const [currentPage, setCurrentPage] = useState(initialVideosArray ? 1 : 0)
+    const [currentPage, setCurrentPage] = useState(initialVideosArray ? 2 : 1)
 
     const { ref } = useInView({
         rootMargin: '1000px',
@@ -27,7 +27,7 @@ export const PopularVideosGallery = ({
     useEffect(() => {
         async function requestVideos() {
             const data = await requestPopularVideos({ page: currentPage })
-            videos ? setVideos(videos?.concat(data)) : setVideos(data)
+            setVideos(videos?.concat(data))
         }
         requestVideos()
         // eslint-disable-next-line react-hooks/exhaustive-deps
