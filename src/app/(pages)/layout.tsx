@@ -8,7 +8,9 @@ export default function RootLayout({
     return (
         <main>
             <Header />
-            <div className='px-8 max-md:px-3'>{children}</div>
+            <div className='px-8 max-md:px-3 flex flex-col pt-20 max-md:pt-10 gap-8'>
+                {children}
+            </div>
         </main>
     )
 }
