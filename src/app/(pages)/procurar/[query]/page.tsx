@@ -1,7 +1,6 @@
 import { Title } from '@/components/Title'
-import { ColorParameterFilter } from '@/components/gallery/ColorParameterFilter'
 import { NavbarGallery } from '@/components/gallery/NavbarGallery'
-import { OrientationParameterFilter } from '@/components/gallery/OrientationParameterFilter'
+import { SearchedPhotoGallery } from '@/components/intersectionObserver/SearchedPhotoGallery'
 
 interface IPhotoSearchPageParams {
     params: {
@@ -23,7 +22,7 @@ export default async function PhotoSearchPage({
     return (
         <>
             <Title>
-                Images de
+                Imagens de
                 <span className='capitalize'>
                     &nbsp;
                     {decodeURIComponent(params.query)}
@@ -47,6 +46,12 @@ export default async function PhotoSearchPage({
                         }`,
                     },
                 }}
+            />
+
+            <SearchedPhotoGallery
+                query={params.query}
+                orientation={orientation}
+                color={color}
             />
         </>
     )

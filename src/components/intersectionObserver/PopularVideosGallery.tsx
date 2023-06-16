@@ -36,7 +36,6 @@ export const PopularVideosGallery = ({
     return (
         <div>
             {videos && <VideoGallery videos={videos} />}
-            <span>Buscando mais videos...</span>
             <div ref={ref} className='h-10'></div>
         </div>
     )

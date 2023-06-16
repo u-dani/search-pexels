@@ -15,6 +15,7 @@ export const PopularPhotosGallery = ({
     const [photos, setPhotos] = useState<IPexelsImageResource[]>(
         initialPhotosArray ?? []
     )
+
     const [currentPage, setCurrentPage] = useState(initialPhotosArray ? 2 : 1)
 
     const { ref } = useInView({
@@ -36,7 +37,6 @@ export const PopularPhotosGallery = ({
     return (
         <div>
             {photos && <PhotoGallery images={photos} />}
-            <span>Buscando mais imagens...</span>
             <div ref={ref} className='h-10'></div>
         </div>
     )

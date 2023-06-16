@@ -17,11 +17,9 @@ export const VideoGallery = ({ videos }: IVideoGalleryProps) => {
         groupsAmount: gridColumns,
     })
 
-    console.log(arrayVideos)
-
     return (
         <div>
-            {arrayVideos ? (
+            {arrayVideos[0].length !== 0 ? (
                 <div className='grid gap-6 grid-cols-3 max-md:grid-cols-2 max-[480px]:grid-cols-1'>
                     {arrayVideos.map(column => (
                         <div
