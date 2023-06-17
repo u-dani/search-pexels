@@ -1,5 +1,6 @@
 import { Title } from '@/components/Title'
 import { NavbarGallery } from '@/components/gallery/NavbarGallery'
+import { SearchedVideoGallery } from '@/components/intersectionObserver/SearchedVideoGallery'
 
 interface IVideoSearchPageParams {
     params: {
@@ -38,6 +39,11 @@ export default async function VideoSearchPage({
                         orientationParameterValue: searchParams.orientation,
                     },
                 }}
+            />
+
+            <SearchedVideoGallery
+                query={params.query}
+                orientation={searchParams.orientation}
             />
         </>
     )

@@ -112,11 +112,7 @@ export const ColorParameterFilter = ({
                             key={hex}
                             style={{ backgroundColor: hex }}
                             onClick={handleSelect}
-                            className={`w-14 aspect-video ${
-                                hex === color
-                                    ? 'border-transparent border-4'
-                                    : ''
-                            }`}
+                            className={`w-14 aspect-video border`}
                             data-option={hex}></span>
                     ))}
                 </div>

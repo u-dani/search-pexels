@@ -13,7 +13,7 @@ export interface IRequestPhotosBySearchResponse {
     total_results: number
 }
 
-export const RequestPhotosBySearch = async ({
+export const requestPhotosBySearch = async ({
     query,
     orientation,
     color,
