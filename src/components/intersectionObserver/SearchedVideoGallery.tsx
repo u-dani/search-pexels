@@ -21,38 +21,39 @@ export const SearchedVideoGallery = ({
             videos: [],
             total_results: 1,
         })
-    const [currentPage, setCurrentPage] = useState(1)
 
-    const requestVideos = async () => {
-        console.log('paginas', currentPage)
-        const data = await requestVideosBySearch({
-            query: query,
-            orientation: orientation,
-            page: currentPage,
-            per_page: 20,
-        })
-
-        setDataVideos({
-            videos: dataVideos?.videos.concat(data.videos),
-            total_results: data.total_results,
-        })
-    }
-
-    useEffect(() => {
-        setDataVideos({ videos: [], total_results: 1 })
-        setCurrentPage(1)
-        requestVideos()
-    }, [orientation])
+    const [currentPage, setCurrentPage] = useState(0)
 
     const { ref } = useInView({
         rootMargin: '1000px',
         onChange(inView) {
             if (inView) {
                 setCurrentPage(state => state + 1)
-                requestVideos()
             }
         },
     })
+
+    useEffect(() => {
+        setCurrentPage(state => 0)
+        setDataVideos({ videos: [], total_results: 1 })
+    }, [orientation])
+
+    useEffect(() => {
+        async function request() {
+            const data = await requestVideosBySearch({
+                query: query,
+                orientation: orientation,
+                page: currentPage,
+                per_page: 20,
+            })
+            setDataVideos({
+                videos: dataVideos.videos.concat(data.videos),
+                total_results: data.total_results,
+            })
+        }
+
+        request()
+    }, [currentPage])
 
     return (
         <div>
@@ -61,7 +62,6 @@ export const SearchedVideoGallery = ({
             ) : (
                 <VideoGallery videos={dataVideos.videos} />
             )}
-
             <div ref={ref} className='h-10'></div>
         </div>
     )

@@ -28,8 +28,5 @@ export const requestVideosBySearch = async ({
     )
 
     const data = await res.json()
-
-    console.log(res)
-    console.log(data)
     return data
 }
