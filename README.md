@@ -6,13 +6,10 @@ Um clone simplificado do site do [Pexels](https://www.pexels.com/pt-br/), um sit
 
 <a target="_blank" href="https://search-pexels.vercel.app/">https://search-pexels.vercel.app/</a>
 
-Homepage
 ![](public/demo/homepage.jpg)
 
-Desktop
 ![](public/demo/desktop.jpg)
 
-Mobile
 ![](public/demo/mobile.jpg)
 
 ## 💻 Primeiros passos
