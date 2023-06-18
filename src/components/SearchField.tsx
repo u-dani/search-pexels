@@ -4,7 +4,6 @@ import { useRouter } from 'next/navigation'
 import { BsCardImage } from 'react-icons/bs'
 import { BsPlayBtn } from 'react-icons/bs'
 import { MdSearch } from 'react-icons/md'
-
 import { Select } from './Select'
 
 interface ISearchContentTypes {
