@@ -12,8 +12,15 @@ Um clone simplificado do site do [Pexels](https://www.pexels.com/pt-br/), um sit
 
 ![](public/demo/mobile.jpg)
 
-## 💻 Primeiros passos
 
+## 🛠 Tecnologias usadas
+
+-   [Nextjs + React](https://nextjs.org/)
+-   [TypeScript](https://www.typescriptlang.org/pt/)
+-   [TailwindCss](https://tailwindcss.com/)
+
+
+## 💻 Primeiros passos
 Antes de começar, voce precisa ter o [Git](https://git-scm.com) e o [Node.js](https://nodejs.org/en/) instalados na sua máquina.
 
 ```bash
@@ -26,8 +33,3 @@ $ npm run dev # ou yarn dev
 
 Por fim, abra [http://localhost:3000](http://localhost:3000) no navegador para ver o resultado.
 
-## 🛠 Tecnologias usadas
-
--   [Nextjs + React](https://nextjs.org/)
--   [TypeScript](https://www.typescriptlang.org/pt/)
--   [Tailwind](https://tailwindcss.com/)
