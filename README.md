@@ -27,6 +27,9 @@ Antes de começar, voce precisa ter o [Git](https://git-scm.com) e o [Node.js](h
 # Clonar repositório
 $ git clone https://github.com/u-dani/search-pexels.git
 
+# Instalar dependências
+$ npm install
+
 # Executar o servidor
 $ npm run dev # ou yarn dev
 ```
