@@ -1,6 +1,6 @@
 # Search Pexels
 
-Um clone simplificado do site do [Pexels](https://www.pexels.com/pt-br/), um site de busca de imagens e vídeos gratuitos, todo o conteúdo do site vem da [API do Pexels](https://www.pexels.com/pt-br/api/)
+Um clone simplificado do site do [Pexels](https://www.pexels.com/pt-br/), onde você pode buscar por imagens e vídeos, fazer download de imagens e filtrar por orientação e cor. Todo o conteúdo vem da [API do Pexels](https://www.pexels.com/pt-br/api/).
 
 ## 🌠 Demo
 
